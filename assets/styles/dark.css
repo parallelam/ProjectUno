@@ -1,0 +1,50 @@
+.jumbotron {
+    background-color: #18a999;
+}
+
+.dropdown-item {
+    background-color: #f7f0f0;
+    color: #484349;
+}
+
+.bg-image {
+    background-image: url("../images/darklogobackground.png")
+}
+
+.dropdown-item.hover {
+   background-color:  #058c42;
+   color: #f7f0f0;
+}
+
+form {
+    border: solid 1.5px #8af3ff;
+    background-color: #484349;
+    color: #f7f0f0;
+    border-radius: 60px/40px;
+}
+
+#dropdownmenu2 {
+    background-color: #058c42;
+}
+
+footer {
+    background-color: #18a999;
+    color: #f7f0f0
+}
+
+
+
+/*Fav icon styling*/
+.fav {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    left: 10px;
+    opacity: .5;
+
+}
+.fav:hover{
+    opacity: 1;
+    cursor: pointer;
+}

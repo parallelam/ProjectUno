@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Where Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <!-- Bootstrap Grid & CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Font Styling & CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Local CSS Style -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+    <!-- Modularized JavaScript -->
+    <script type="text/javascript" src="assets/main.js" defer></script>
+    <script type="text/javascript" src="assets/nocallfunctions.js" defer></script>
+    <script type="text/javascript" src="assets/calls.js" defer></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Wicked CSS -->
+    <link rel="stylesheet" href="assets/styles/wickedcss.min.css">
+</head>
+
+    <!-- Begin Body & Document -->
+
+<body class="bg-image">
+
+    <!-- Header and Navigation -->
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button id="home-menu" class="dropdown-item" type="button">Home</button>
+                        <button id="signin-menu" class="dropdown-item" type="button">Sign In</button>
+                        <button id="signup-menu" class="dropdown-item" type="button">Sign Up</button>
+                        <button id="signout-menu" class="dropdown-item" type="button">Sign Out</button>
+                        <button id="favorites-menu" class="dropdown-item" type="button">Favorites</button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div id="wolfIcon"></div>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="slideDown">Where Watch</h1>
+                </div>
+                <div class="col-md-3">
+                    <div id="displayName"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Existing User Signin -->
+
+    <form id="signin-form">
+        <h3 class='alert'></h3>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="emailInput1" aria-describedby="emailHelp" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="passwordInput1" placeholder="Password">
+        </div>
+        <button type="submit" id="signin-button" class="btn btn-primary">Sign In</button>
+        <button type="submit" id="go2PasswordReset">Forgot your password?</button>
+    </form>
+
+    <!-- User Registration -->
+
+    <form id="signup-form">
+        <h3 class='alert'></h3>
+        <div class="form-group">
+            <label for="inputUserName">User Name</label>
+            <input type="userName" class="form-control" id="userNameInput" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="emailInput2" aria-describedby="emailHelp" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="passwordInput2" placeholder="Password">
+            <small id="passwordHelp" class="form-text text-muted">Password must be at least 6 characters.</small>
+        </div>
+        <button type="submit" id="signup-button" class="btn btn-primary">Sign Up</button>
+    </form>
+
+    <!-- User Password Reset -->
+
+    <form id="reset-form">
+        <h3 class='alert'></h3>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="emailInput3" aria-describedby="emailHelp" placeholder="email@example.com">
+        </div>
+        <button type="submit" id="passwordReset" class="btn btn-primary">Reset Password</button>
+    </form>
+
+    <!-- Search Button & Search Input Area -->
+
+    <form id='search-form'>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="search">Search Movies and Shows</label>
+                    <input type="text" class="searchShows" id="search-input" placeholder="Type Title Here">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" id="search-button" class="btn btn-info searchbtn"></button>
+                    <button class="btn btn-primary btn-sm movies" id="search-type"></button>
+                    <button class="btn btn-success btn-sm free" id="source-type"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Favorites Redirect -->
+
+    <div>
+        <h2 id="favAlert">Must be signed in to see favorites</h2>
+    </div>
+
+    <!-- Search Results Populate Here -->
+
+    <div class='container'>
+        <div class="row streamingservicecontainer">
+            <div class="col-md-12" id="streaming-services">
+                <div class="streaming-service-icon" id="hbo"></div>
+                <div class="streaming-service-icon" id="hulu"></div>
+                <div class="streaming-service-icon" id="netflix"></div>
+                <div class="streaming-service-icon" id="primevideo"></div>
+                <div class="streaming-service-icon" id="youtube"></div>
+                <div class="streaming-service-icon" id="itunes"></div>
+                <div class="streaming-service-icon" id="vudu"></div>
+                <div class="streaming-service-icon" id="googleplay"></div>
+            </div>
+        </div>
+
+        <div class='row' id='results-display'>
+            <div id="search-results"></div>
+            <div id="favorites"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="details">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Footer -->
+
+    <footer>
+        <p>
+            UNC Coding Bootcamp -Project 1- Charles, Sarah, Wes, Amy <br>
+            Wolf Icons from <a>
+                <href src="https://svgsilh.com/">svgsilh.com</href>
+            </a>
+        </p>
+    </footer>
+
+    <!-- End Body & Document -->
+</body>
+</html>

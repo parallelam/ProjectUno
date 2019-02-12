@@ -1,0 +1,284 @@
+#wolfIcon {
+    height: 100px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/werewolfStanding.png");
+}
+
+/*#wolfIcon:hover {
+    opacity: .5;
+   background-image: url("../images/werewolfHowl.png");
+}*/
+
+#wolfIcon2 {
+    height: 75px;
+}
+
+.jumbotron {
+    margin-top: -1px;
+    background-color: #8af3ff;
+    text-align: center;
+    padding: 30px;
+} 
+
+h1 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 65px;
+}
+
+.dropdown-item {
+    background-color: #484349;
+    color: #f7f0f0;
+    padding: 0%;
+}
+
+.dropdown-item:hover {
+    background-color: #18a999;;
+    color: #241623;
+}
+
+.bg-image {
+    background-image: url("../images/biglogobackground.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searchbtn {
+    background-color:  #058c42;
+    color: #f7f0f0;
+    outline-color: #18a999;
+}
+#userName{
+    background: white;
+    height:50px;
+    width: 50px;
+}
+
+form {
+    padding: 40px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1.5px #18a999;
+    background-color: #f7f0f0;
+    border-radius: 60px/40px;
+}
+
+button {
+    background-color: #18a999;
+    color: white;
+    outline-color: #484349;
+}
+
+footer {
+    background-color: #f7f0f0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.myDiv {
+    height:15%;
+    width:20%;
+    float: left;
+}
+
+.movie-image {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: hsl(0, 0%, 5%);
+    height:300px;
+    width: 175px;
+    display:relative
+}
+
+#results-display {
+    text-align: center;
+    background-color: #ddd;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    border-color: hsl(0, 0%, 5%);
+    overflow: scroll;
+    margin-bottom: 100px;
+    box-shadow: 20px 20px 20px black;
+}
+
+
+.package {
+    float: left;
+    margin: 15px;
+    border: 1px solid blue;
+    position: relative;
+    box-shadow: 10px 10px 5px black;
+}
+
+/*Fav icon styling*/
+.fav {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    right: 10px;
+    top: 10px;
+    opacity: .7;
+    background: white;
+    border-radius: 20%;
+
+}
+.fav:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#displayName {
+    background-color: white;
+    height:100px;
+    width:100px;
+}
+
+.details {
+    position: absolute;
+    height: 40px;
+    font-size: 30px;
+    width: 100%;
+    bottom: -5px;
+    opacity: .5;
+    color: black;
+}
+
+.details:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.package:hover {
+    transition-duration: 500ms;
+    box-shadow: none;
+}
+
+.package:hover > .details {
+    transition-duration: 200ms;
+    background: black;
+    opacity: .8;
+}
+
+.package:hover > .fav {
+    transition-duration: 200ms;
+    opacity: .9;
+}
+
+.streamSearch {
+    position: absolute;
+    height: 40px;
+    font-size: 30px;
+    width: 100%;
+    bottom: 150px;
+    opacity: .1;
+    color: white;
+
+}
+
+.streamSearch:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.package:hover > .streamSearch {
+    transition-duration: 200ms;
+    background: black;
+    opacity: .8;
+}
+#favAlert{
+    display: none;
+    padding: 40px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1.5px #18a999;
+    background-color: #f7f0f0;
+    border-radius: 60px/40px;
+}
+#search-input {
+    text-align:center;
+}
+
+/********** Streaming Services Bar ************/
+#streaming-services {
+    background: lightblue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.streaming-service-icon {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 10px;
+}
+
+#hbo {
+    background-image: url(../images/servicelogos/hbonow.png);
+    background-repeat: none;
+    background-size: contain;
+    opacity: .5;
+}
+
+#hulu {
+    background-image: url(../images/servicelogos/hulu.jpg);
+    background-repeat: none;
+    background-size: contain;
+    opacity: .5;
+}
+
+#netflix {
+    background-image: url(../images/servicelogos/netflix.jpg);
+    background-repeat: none;
+    background-size: contain;
+    opacity: .5;
+}
+
+#primevideo {
+    background-image: url(../images/servicelogos/primevideo.jpg);
+    background-repeat: none;
+    background-size: contain;
+    opacity: .5;
+}
+
+#youtube {
+    background-image: url(../images/servicelogos/youtube.jpg);
+    background-repeat: none;
+    background-size: cover;
+    opacity: .5;
+}
+
+#vudu {
+    background-image: url(../images/servicelogos/vudu.jpg);
+    background-repeat: none;
+    background-size: cover;
+    opacity: .5;
+}
+
+#itunes {
+    background-image: url(../images/servicelogos/itunes.jpg);
+    background-repeat: none;
+    background-size: cover;
+    opacity: .5;
+}
+
+#googleplay {
+    background-image: url(../images/servicelogos/googleplay.jpg);
+    background-repeat: none;
+    background-size: cover;
+    opacity: .5;
+}

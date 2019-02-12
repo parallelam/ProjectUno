@@ -1,0 +1,21 @@
+@media (max-width: 800px) {
+    #wolfIcon{
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .dropdown {
+        float: left;
+    }
+    h1 {
+        float: right;
+    }
+    #dispalyName {
+        float: right;
+    }
+    .searchbtn {
+        padding-top: 15px;
+    }
+}
+
