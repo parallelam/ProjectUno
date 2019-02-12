@@ -1,4 +1,4 @@
-# Project WhereWatch
+# Project StreamIt
 
 A project intended to tackle the burden of discovering which streaming service a specific movie or show is currently available on.
 
