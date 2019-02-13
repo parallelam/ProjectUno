@@ -1,5 +1,7 @@
 # Project StreamIt
 
+This project is currently dead as of February 13th, 2019 due to GuideBox going pay-to-use and that no free alternatives currently exist.
+
 A project intended to tackle the burden of discovering which streaming service a specific movie or show is currently available on.
 
 Technologies incorporated:
