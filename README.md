@@ -34,6 +34,10 @@ Asynchronous JavaScript and XML - AJAX
 
 [jQuery's AJAX Documentation](http://api.jquery.com/jquery.ajax/)
 
+[Scrum Guide](https://www.scrumguides.org/scrum-guide.html)
+
+[Todd Motto's API List](https://github.com/toddmotto/public-apis)
+
 GitBash
 
 Created in Visual Studio Code
