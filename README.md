@@ -28,9 +28,11 @@ jQuery
 
 Asynchronous JavaScript and XML - AJAX
 
-GuideBox API: https://api.guidebox.com/
+[GuideBox API](https://api.guidebox.com/)
 
-OMDB API: http://www.omdbapi.com/
+[OMDB API](https://www.omdbapi.com/)
+
+[jQuery's AJAX Documentation](http://api.jquery.com/jquery.ajax/)
 
 GitBash
 
@@ -38,10 +40,10 @@ Created in Visual Studio Code
 
 A collaborative effort between: 
 
-Charles Brady: https://github.com/charlesmbrady
+[Charles Brady](https://github.com/charlesmbrady)
 
-Amy Burke: https://github.com/burkeamy
+[Amy Burke](https://github.com/burkeamy)
 
-Sarah Tucker: https://github.com/tucksa
+[Sarah Tucker](https://github.com/tucksa)
 
-Wes Hatley: https://github.com/parallelam
+[Wes Hatley](https://github.com/parallelam)
