@@ -1,4 +1,4 @@
-# Project StreamIt
+# StreamIt
 
 This project is currently dead as of February 13th, 2019 due to GuideBox going pay-to-use and that no free alternatives currently exist.
 
